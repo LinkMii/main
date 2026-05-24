@@ -104,10 +104,45 @@ body {
   to   { opacity: 1; transform: scale(1); }
 }
 </style>
+
+<style>
+.notice1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid red;
+  border-radius: 8px;
+  padding: 8px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.notice1 .scroll-text {
+  display: inline-block;
+  animation: bounce 3s ease-in-out infinite alternate;
+}
+
+.notice1:hover .scroll-text,
+.notice1:active .scroll-text {
+  animation-play-state: paused;
+}
+
+@keyframes bounce {
+  from { transform: translateX(-20px); }
+  to   { transform: translateX(20px); }
+}
+</style>
+  
 </head>
 <body>
 
 <div class="wrapper">
+
+  <div class="notice1">
+  <div class="scroll-text">
+    <a href="https://liinback.linkmii.org">Liinback (LinkTube)</a> is officially out!</a>
+  </div>
+</div>
 
   <img class="logo" src="logo.png">
 
@@ -138,6 +173,11 @@ body {
       <img src="button.png">
       <span>Buy LinkMii</span>
     </div>
+
+    <div class="button" onclick="goLiinback()">
+      <img src="button.png">
+      <span>Liinback</span>
+    </div>
   </div>
 
 </div>
@@ -164,6 +204,10 @@ function goDownloads() {
 
   function goRickroll() {
   window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=fNItXIxbfohWrFRR";
+}
+
+    function goLiinback() {
+  window.location.href = "https://liinback.linkmii.org";
 }
 </script>
 
