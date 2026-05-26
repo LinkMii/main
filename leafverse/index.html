@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LeafVerse</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="../Tab.png">
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  font-family: "MyBold";
+}
+
+@font-face {
+  font-family: "MyBold";
+  src: url("../font(BOLD).otf");
+}
+
+body {
+  background: linear-gradient(to bottom, #0f4c5c, #1b7f5c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-120px);
+}
+
+.logo {
+  width: 450px;
+  max-width: 90vw;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+#tagline {
+  margin-top: -5px;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-family: "MyBold", sans-serif;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+  text-align: center;
+}
+
+.button-row {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  width: min(240px, 40vw);
+  transition: transform 0.2s ease;
+}
+
+.button img {
+  width: 100%;
+  display: block;
+}
+
+.button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "MyBold", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: black;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .button-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .wrapper {
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<a href="https://linkmii.org">
+  <img class="logo" src="../logo.png">
+</a>
+
+  <span>LeafVerse</span>
+
+  <div class="button-row">
+    <div class="button" onclick="goLVW()">
+      <img src="../button.png">
+      <span>LeafVerse Web</span>
+    </div>
+
+    <div class="button" onclick="goLVU()">
+      <img src="../button.png">
+      <span>LeafVerse Wii U</span>
+    </div>
+    
+
+  </div>
+
+</div>
+
+<script>
+
+function goLVU() {
+  window.location.href = "https://disco.streetisreal.com";
+}
+
+function goLVW() {
+  window.location.href = "https://streetisreal.com/leafverse";
+}
+
+</script>
+
+</body>
+</html>
